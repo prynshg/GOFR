@@ -40,15 +40,6 @@ func (h handler) GetByID(ctx *gofr.Context) (interface{}, error) {
 	return resp, nil
 }
 
-func (h handler) GetAll(ctx *gofr.Context) (interface{}, error) {
-	students, err := h.store.GetAll(ctx)
-	if err != nil {
-		return nil, err
-	}
-
-	return students, nil
-}
-
 func (h handler) Create(ctx *gofr.Context) (interface{}, error) {
 	var student model.Student
 
